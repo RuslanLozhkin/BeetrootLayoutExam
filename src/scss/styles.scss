@@ -1,0 +1,429 @@
+%txt{ /*all <p>*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #e8e8e8;
+    line-height: 26px;
+}
+%bhromaon{ /*Screen 1 main  title*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+}
+%bhromaon-small{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.14rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+%placeholder{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #999;
+}
+%title{/*why choose us / What Our Tourist Say*/
+    font-family: 'Aleo', serif;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #fff;
+}
+%title1{/*Sam Sumon / Grand Spain Madrid*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+%title2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    letter-spacing: 4.96px;
+    color: #fff;
+    text-transform: capitalize;
+}
+%title3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.075rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+%btn{ /*all buttons but not submit*/
+    width: 225px;
+    height: 60px;
+    background-color: #496bfe;
+    a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        &:hover{
+            color: #999;
+        }
+        p{
+            font-family: 'Aleo', serif;
+            font-size: 16px;
+            letter-spacing: 0.075em;
+        }
+    }
+}
+$bgscreen1: url(bg/bg0.png);
+$bgscreen2: #5474fd;
+$bgscreen3: url(bg/bg1.png);
+$bgscreen4: url(bg/bg2.png);
+$bgscreen5: url(bg/bg3.png);
+$bgscreen6: url(bg/bg4.png);
+$bgscreen7: url(bg/bg5.png);
+$bgscreen8: #232323;
+body{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    transition: all .3s ease-in;
+}
+h1,h2,h3, p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+section{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    >div{
+        width: 1110px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.screen1__wrapper{
+    min-height: 740px;
+    background: $bgscreen1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .screen1{
+        width: 650px;
+        height: 340px;
+        text-align: center; 
+        justify-content: space-between;
+        &__title h1{
+            @extend %bhromaon;
+        }
+        &__subtitle{
+            @extend %title2;
+        }
+        &__form{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            width: 100%;
+            height: 56px;
+            box-sizing: border-box;
+            border: 2px solid #fff;
+            margin-bottom: 120px;
+        }
+        &__input{
+            border: none;
+            height: 52px;
+            width: 500px;
+            padding-left: 120px;
+            box-sizing: border-box;
+            input[placeholder]{
+                @extend %placeholder;
+            }
+        }
+        &__btn{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-around;
+            text-transform: uppercase;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.2rem;
+            color: #fff;
+            border: none;
+            background-color: #5474fd;
+            width: 146px;
+            height: 52px;
+            &:hover{
+                color: #999;
+            }
+        }
+        &__scroll{
+            cursor: pointer;
+            p{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 14px;
+                letter-spacing: 0.2rem;
+                color: #fff;
+                text-transform: capitalize;
+            }
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $bgscreen2;
+    height: 80px;
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1110px;
+    }
+    &__logo h2{
+        @extend %bhromaon-small;
+        font-size: 24px;
+    }
+    &__chck{
+        display: none;
+    }
+    &__label{
+        display: none;
+    }
+    &__ul{
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0;
+        margin: 0;
+    }
+    &__li{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        + li{
+            margin-left: 44px;
+        }
+        a{
+            font-family: 'Aleo', serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: #999;
+            }
+        }
+    }
+}
+.screen3__wrapper{
+    background: $bgscreen3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 685px;
+    .screen3{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        height: 450px;
+        &__left{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            height: 100%;
+            width: 540px;
+            margin-right: 95px;
+        }
+        &__title{
+            @extend %title;
+        }
+        &__txt{
+            @extend %txt;
+        }
+        &__btn{
+            @extend %btn;
+        }
+        &__right{
+            width: 475px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+        }
+        &__img1{
+            justify-self: flex-start;
+            margin-bottom: 5px;
+        }
+        &__img2{
+            align-self: flex-end;
+        }
+    }
+}
+.screen4__wrapper{
+    min-height: 337px;
+    background: $bgscreen4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .screen4{
+        &__ul{
+            list-style: none;
+            display: flex;
+            flex-flow: row nowrap;
+            width: 1110px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        &__li{
+            width: 220px;
+            height: 120px;
+            a{
+                text-decoration: none;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                p{
+                    font-family: 'Aleo', serif;
+                    font-size: 36px;
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.screen5__wrapper{
+    background: $bgscreen5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    padding: 230px 210px 0 210px;
+    box-sizing: border-box;
+    .screen5{
+        background-color: #2e2826;
+        opacity: .9;
+        width: 540px;
+        height: 370px;
+        padding: 50px 30px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-right: auto;
+        &__subtitle h3{
+            @extend %title3;
+        }
+        &__title h2{
+            @extend %title1;
+        }
+        &__txt p{
+            @extend %txt;
+        }
+        &__btn{
+            @extend %btn;
+        }
+    }
+}
+.screen6__wrapper{
+    background: $bgscreen6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    padding: 230px 210px 0 210px;
+    box-sizing: border-box;
+    .screen6{
+        background-color: #2e2826;
+        opacity: .9;
+        width: 540px;
+        height: 370px;
+        padding: 50px 30px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-left: auto;
+        &__subtitle h3{
+            @extend %title3;
+        }
+        &__title h2{
+            @extend %title1;
+        }
+        &__txt p{
+            @extend %txt;
+        }
+        &__btn{
+            @extend %btn;
+        }
+    }
+}
+.screen7__wrapper{
+    background: $bgscreen7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 730px;
+    .screen7{
+        &__title h2{
+            @extend %title;
+            margin-bottom: 100px;
+        }
+        &__inner{
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: #333;
+        }
+        &__description{
+            margin-left: 60px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+        }
+        &__subtitle{
+            @extend %title1;
+        }
+        &__txt{
+            @extend %txt;
+        }
+    }
+}
+.footer{
+    background-color: #232323;
+    width: 100%;
+    min-height: 265px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        @extend %bhromaon-small;
+        margin-bottom: 1rem;
+    }
+    &__txt{
+        @extend %txt;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    &__icons{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 166px;
+        a{
+            width: 16px;
+            height: 16px;
+        }
+
+    }
+}
