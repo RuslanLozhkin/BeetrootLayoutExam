@@ -1,8 +1,8 @@
 /*screen1 SVGs*/
 .screen1__search{
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     fill: #fff;
 }
 .screen1__btn:hover svg{
@@ -20,7 +20,18 @@
 .screen1__scroll:hover{
     fill: #999;
 }
+/*header menu*/
+.header__bars{
+    display: block;
+    width: 48px;
+    height: 48px;
+    fill: #fff;
+}
+input[type="checkbox"]:checked ~ label>svg{
+    transform: rotate(90deg);
+    transition: transform .2s;
 
+}
 /*screen4 SVGs*/
 .screen4__search{
     display: block;
@@ -44,10 +55,10 @@
     height: 60px;
     fill: #00a2ff;
 }
-#whatwedo ul li a:hover svg g{
+#whatwedo ul li a:hover svg{
     fill: #222;
 }
-#whatwedo ul li a:hover .screen4__search g{
+#whatwedo ul li a:hover .screen4__search{
     fill: #222;
     stroke: #222;
 }
