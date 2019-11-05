@@ -1,3 +1,4 @@
+/*svg styles are in dist/css/svg.css*/
 %txt{ /*all <p>*/
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
@@ -96,6 +97,11 @@ h1,h2,h3, p{
     padding: 0;
     font-weight: normal;
 }
+i{
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
 section{
     width: 100%;
     background-repeat: no-repeat;
@@ -108,6 +114,7 @@ section{
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        
     }
 }
 .screen1__wrapper{
@@ -161,6 +168,7 @@ section{
             background-color: #5474fd;
             width: 146px;
             height: 52px;
+            position: relative;
             &:hover{
                 color: #999;
             }
@@ -248,7 +256,8 @@ section{
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
-            height: 350px;
+            min-height: 350px;
+            height: 100%;
             width: 540px;
             margin-right: 95px;
         }
@@ -257,6 +266,7 @@ section{
         }
         &__txt{
             @extend %txt;
+            width: inherit;
         }
         &__btn{
             @extend %btn;
@@ -333,12 +343,14 @@ section{
             opacity: .9;
             width: 540px;
             min-height: 370px;
+            height: 100%;
             padding: 50px 30px;
             box-sizing: border-box;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
             margin-right: auto;
+            margin-bottom: 100px;
         }
         &__subtitle h3{
             @extend %title3;
@@ -372,6 +384,7 @@ section{
             opacity: .9;
             width: 540px;
             min-height: 370px;
+            height: 100%;
             padding: 50px 30px;
             box-sizing: border-box;
             display: flex;
@@ -398,17 +411,33 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 730px;
+    display: table;
+    height: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
     .screen7{
+        display: table-cell;
+        vertical-align: middle;
+        &__title{
+            margin-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         &__title h2{
             @extend %title;
-            margin-bottom: 100px;
+            text-align: center;
         }
         &__inner{
+            width: 1110px;
             display: flex;
             flex-flow: row nowrap;
             background-color: #333;
+            margin: auto;
         }
         &__description{
+            vertical-align: middle;
+            width: 650px;
+            height: inherit;
             margin-left: 60px;
             display: flex;
             flex-flow: column wrap;
@@ -419,6 +448,7 @@ section{
         }
         &__txt{
             @extend %txt;
+            text-indent: 16px;
         }
     }
 }
@@ -426,10 +456,13 @@ section{
     background-color: #232323;
     width: 100%;
     min-height: 265px;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 120px 15px 50px 15px;
+    box-sizing: border-box; 
     &__title{
         @extend %bhromaon-small;
         margin-bottom: 1rem;
@@ -466,6 +499,10 @@ section{
             }
             &__btn{
                 width: 20%;
+                text-align: center;
+                p{
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -546,6 +583,7 @@ section{
             &__img2{
                 margin: 0;
             }
+
         }
     }
 }
@@ -554,6 +592,8 @@ section{
         .screen3{
             &__left{
                 width: 100%;
+                padding: 0 10px;
+                box-sizing: border-box;
             }
         }
     }
@@ -610,6 +650,9 @@ section{
 /*@media for screen5*/
 @media only screen and (max-width: 800px){
     .screen5__wrapper{
+        padding-bottom: 100px;
+        padding-top: 230px;
+        box-sizing: border-box;
         .screen5{
             padding: 0;
             &__inner{
@@ -630,6 +673,9 @@ section{
 /*@media for screen6*/
 @media only screen and (max-width: 800px){
     .screen6__wrapper{
+        padding-bottom: 100px;
+        padding-top: 230px;
+        box-sizing: border-box;
         .screen6{
             padding: 0;
             &__inner{
@@ -663,9 +709,17 @@ section{
             }
             &__description{
                 margin: 0;
+                width: 100%;
+            }
+            &__txt{
+                width: 100%;
+                p{
+                    text-align: center;
+                }
             }
             &__title{
                 margin-top: 80px;
+                text-align: center;
             }
             &__subtitle{
                 margin-top: 20px;
@@ -678,6 +732,12 @@ section{
         .screen7{
             width: 100%;
             &__inner{
+                width: 100%;
+            }
+            &__description{
+                width: 100%;
+            }
+            &__txt{
                 width: 100%;
             }
             &__img{
